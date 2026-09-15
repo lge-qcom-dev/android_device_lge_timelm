@@ -173,6 +173,9 @@ $(call soong_config_set_bool,libion,legacy_impl,true)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
+# IMS
+$(call inherit-product, hardware/lineage/generic-ims/ims.mk)
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
