@@ -309,6 +309,8 @@ PRODUCT_PACKAGES += \
     fstab.timelm \
     fstab.timelm.ramdisk \
     init.lge.rc \
+    init.lge.usb.rc \
+    init.lge.usb.configfs.rc \
     init.lge.vendor.rc \
     init.qcom.power.rc \
     init.qcom.rc \

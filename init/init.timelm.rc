@@ -3,6 +3,8 @@ import /vendor/etc/init/hw/init.qcom.rc
 
 # to override init.qcom.rc and init.target.rc
 import /vendor/etc/init/hw/init.lge.rc
+import /vendor/etc/init/hw/init.lge.usb.rc
+import /vendor/etc/init/hw/init.lge.usb.configfs.rc
 
 service vendor.nfc_hal_service-cxd22xx /vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx
     interface android.hardware.nfc@1.0::INfc default
