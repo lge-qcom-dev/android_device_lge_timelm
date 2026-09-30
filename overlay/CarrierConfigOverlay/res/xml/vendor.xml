@@ -2343,4 +2343,9 @@
             <item value="3,11,9,10,15" />
         </string-array>
     </carrier_config>
+    <carrier_config>
+        <pbundle_as_map name="apims.carrier_config_bundle">
+            <boolean name="imsvoice.audio_evs_support_bool" value="false" />
+        </pbundle_as_map>
+    </carrier_config>
 </carrier_config_list>
