@@ -408,3 +408,7 @@ firmware_directories /mnt/vendor/persist-lg/wifi/qcom/ /vendor/firmware_mnt/imag
 /sys/class/power_supply/battery  battery_charging_enabled   0660    system  system
 /sys/class/power_supply/battery  charging_enabled           0660    system  system
 /sys/class/power_supply/battery  input_suspend              0660    system  system
+
+# DualScreen
+/dev/hidraw* 0660 system system
+/dev/ttyACM* 0660 system system
