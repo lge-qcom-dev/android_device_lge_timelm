@@ -134,6 +134,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.memtrack-service
 
+# DualScreen
+$(call inherit-product, hardware/lge/dualscreen/dualscreen.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -166,10 +169,6 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_lge_kona
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
-
 # IMS
 $(call inherit-product, hardware/lineage/generic-ims/ims.mk)
 
@@ -177,6 +176,10 @@ $(call inherit-product, hardware/lineage/generic-ims/ims.mk)
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_PRODUCT)/usr/keylayout/gpio-keys.kl
 
 # Light
 PRODUCT_PACKAGES += \
